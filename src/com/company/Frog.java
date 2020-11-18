@@ -4,8 +4,6 @@ final class Frog extends Reptile {
     private String name;
     private String color;
 
-    public Frog(Frog objectC) {
-    }
 
     public Frog(Kind kind, Country country, String name, String color) {
         super(kind, country);
@@ -18,9 +16,26 @@ final class Frog extends Reptile {
         this.name = name;
     }
 
+    public Frog(Frog objectC) {
+    }
+
     public void copyMetod(Frog frog) {
         this.name = frog.getName();
         this.color = frog.getColor();
+    }
+
+    public void jumping(int km, int howMany, String where) {
+        for (int i = 0; i < howMany; i++) {
+            System.out.println("He jumping  to " + where + " " + km + " km!");
+        }
+
+    }
+
+    public void jumping(String where, int howMany, int km) {
+        for (int i = 0; i < howMany; i++) {
+            System.out.println("He jumping to  " + where + " " + km + " km!");
+        }
+
     }
 
     final String getInfo2() {
